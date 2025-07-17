@@ -1,4 +1,4 @@
-package JournalPkg;
+package ClassesAndObjects;
 
 import java.time.LocalDate;
 

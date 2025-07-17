@@ -1,8 +1,8 @@
-package JournalPkg;
+package ClassesAndObjects;
 
 import java.time.LocalDate;
 
-public class Application {
+public class Main {
     public static void main(String[] args) {
         Journal jornalNovo = new Journal(
                 "História Hoje",
