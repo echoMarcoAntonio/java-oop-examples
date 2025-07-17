@@ -1,4 +1,4 @@
-package ClassesAndObjects;
+package classes_and_objects;
 
 import java.time.LocalDate;
 

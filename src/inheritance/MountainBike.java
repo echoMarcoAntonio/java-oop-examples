@@ -1,4 +1,4 @@
-package Inheritance;
+package inheritance;
 
 public class MountainBike extends Bicycle {
     public int seatHeight;
