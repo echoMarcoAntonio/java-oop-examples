@@ -1,3 +1,5 @@
+package JournalPkg;
+
 import java.time.LocalDate;
 
 public class Journal {
@@ -21,7 +23,11 @@ public class Journal {
         return title;
     }
     public void setTitle(String title) {
-        this.title = title;
+        if (title.length() > 3) {
+            this.title = title;
+        } else  {
+            System.out.println("O título deve ter mais de 3 caracteres.");
+        }
     }
     public String getPublisher() {
         return publisher;
@@ -45,12 +51,29 @@ public class Journal {
         return price;
     }
     public void setPrice(double price) {
-        this.price = price;
+        if (price >= 0) {
+            this.price = price;
+        } else  {
+            System.out.println("Preço deve ser um valor positivo.");
+        }
     }
     public int getNumberOfPages() {
         return numberOfPages;
     }
     public void setNumberOfPages(int numberOfPages) {
-        this.numberOfPages = numberOfPages;
+        if (numberOfPages > 0) {
+            this.numberOfPages = numberOfPages;
+        } else {
+            System.out.println("O número de páginas não pode ser negativo.");
+        }
+    }
+
+    public void printInfo() {
+        System.out.println("Título: " + this.title);
+        System.out.println("Editora: " + this.publisher);
+        System.out.println("ISSN: " + this.issn);
+        System.out.println("Data da edição: " + this.editionDate);
+        System.out.println("Preço: " + this.price);
+        System.out.println("Número de páginas: " + this.numberOfPages);
     }
 }
