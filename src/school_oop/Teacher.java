@@ -1,10 +1,16 @@
 package school_oop;
 
-public class Professor extends Person {
+import java.util.ArrayList;
+
+public class Teacher extends Person {
     private String academicDegree;
     private double salary;
 
-    public Professor(String name, int registrationNumber, String academicDegree, double salary) {
+    ArrayList<Discipline> disciplines;
+
+    ArrayList<schoolClass> schoolClasses;
+
+    public Teacher(String name, int registrationNumber, String academicDegree, double salary) {
         super(name, registrationNumber);
         this.academicDegree = academicDegree;
         this.salary = salary;
@@ -26,5 +32,5 @@ public class Professor extends Person {
         this.salary = salary;
     }
 
-    //TO-DO: aplicarAvaliacao():void
+    //TO-DO: applyTest():void
 }

@@ -1,10 +1,17 @@
 package school_oop;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class schoolClass {
     private String acronym;
     private int year;
+
+    ArrayList<Student> students;
+
+    ArrayList<Teacher> teachers;
+
+    ArrayList<Discipline> disciplines;
 
     public schoolClass(String acronym, int year) {
         this.acronym = acronym;
@@ -27,5 +34,5 @@ public class schoolClass {
         this.year = year;
     }
 
-    //TO-DO: adicionarAluno():void
+    //TO-DO: addStudent():void
 }
