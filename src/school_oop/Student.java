@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class Student extends Person {
     private LocalDate birthDate;
 
-    private schoolClass schoolClass;
+    private SchoolClass schoolClass;
 
     public Student(String name, int registrationNumber, LocalDate birthDate) {
         super(name, registrationNumber);
@@ -18,6 +18,14 @@ public class Student extends Person {
 
     public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
+    }
+
+    public SchoolClass getSchoolClass() {
+        return schoolClass;
+    }
+
+    public void setSchoolClass(SchoolClass schoolClass) {
+        this.schoolClass = schoolClass;
     }
 
     //TO-DO: doTest():void

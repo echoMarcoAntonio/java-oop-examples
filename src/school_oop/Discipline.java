@@ -6,9 +6,8 @@ public class Discipline {
     private String name;
     private int workload;
 
-    ArrayList<Teacher> teachers;
-
-    ArrayList<schoolClass> schoolClasses;
+    private ArrayList<Teacher> teachers;
+    private ArrayList<SchoolClass> schoolClasses;
 
     public Discipline(String name, int workload) {
         this.name = name;
@@ -29,5 +28,21 @@ public class Discipline {
 
     public void setWorkload(int workload) {
         this.workload = workload;
+    }
+
+    public ArrayList<Teacher> getTeachers() {
+        return teachers;
+    }
+
+    public void setTeachers(ArrayList<Teacher> teachers) {
+        this.teachers = teachers;
+    }
+
+    public ArrayList<SchoolClass> getSchoolClasses() {
+        return schoolClasses;
+    }
+
+    public void setSchoolClasses(ArrayList<SchoolClass> SchoolClasses) {
+        this.schoolClasses = SchoolClasses;
     }
 }

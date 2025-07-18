@@ -6,9 +6,9 @@ public class Teacher extends Person {
     private String academicDegree;
     private double salary;
 
-    ArrayList<Discipline> disciplines;
+    private ArrayList<Discipline> disciplines;
 
-    ArrayList<schoolClass> schoolClasses;
+    private ArrayList<SchoolClass> schoolClasses;
 
     public Teacher(String name, int registrationNumber, String academicDegree, double salary) {
         super(name, registrationNumber);
@@ -30,6 +30,22 @@ public class Teacher extends Person {
 
     public void setSalary(double salary) {
         this.salary = salary;
+    }
+
+    public ArrayList<Discipline> getDisciplines() {
+        return disciplines;
+    }
+
+    public void setDisciplines(ArrayList<Discipline> disciplines) {
+        this.disciplines = disciplines;
+    }
+
+    public ArrayList<SchoolClass> getSchoolClasses() {
+        return schoolClasses;
+    }
+
+    public void setSchoolClasses(ArrayList<SchoolClass> SchoolClasses) {
+        this.schoolClasses = SchoolClasses;
     }
 
     //TO-DO: applyTest():void
