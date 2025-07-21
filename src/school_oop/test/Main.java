@@ -1,4 +1,6 @@
-package school_oop;
+package school_oop.test;
+
+import school_oop.model.Person;
 
 public class Main {
     public static void main(String[] args) {

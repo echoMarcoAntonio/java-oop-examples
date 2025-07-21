@@ -1,19 +1,21 @@
-package school_oop;
+package school_oop.model;
 
-import java.util.ArrayList;
+import school_oop.repository.DisciplineRepository;
+import school_oop.repository.SchoolClassRepository;
 
 public class Teacher extends Person {
     private String academicDegree;
     private double salary;
 
-    private ArrayList<Discipline> disciplines;
-
-    private ArrayList<SchoolClass> schoolClasses;
+    private final DisciplineRepository disciplines;
+    private final SchoolClassRepository schoolClasses;
 
     public Teacher(String name, int registrationNumber, String academicDegree, double salary) {
         super(name, registrationNumber);
         this.academicDegree = academicDegree;
         this.salary = salary;
+        this.disciplines = new DisciplineRepository();
+        this.schoolClasses = new SchoolClassRepository();
     }
 
     public String getAcademicDegree() {
@@ -32,20 +34,12 @@ public class Teacher extends Person {
         this.salary = salary;
     }
 
-    public ArrayList<Discipline> getDisciplines() {
+    public DisciplineRepository getDisciplines() {
         return disciplines;
     }
 
-    public void setDisciplines(ArrayList<Discipline> disciplines) {
-        this.disciplines = disciplines;
-    }
-
-    public ArrayList<SchoolClass> getSchoolClasses() {
+    public SchoolClassRepository getSchoolClasses() {
         return schoolClasses;
-    }
-
-    public void setSchoolClasses(ArrayList<SchoolClass> SchoolClasses) {
-        this.schoolClasses = SchoolClasses;
     }
 
     //TO-DO: applyTest():void

@@ -1,17 +1,20 @@
-package school_oop;
+package school_oop.model;
 
-import java.util.ArrayList;
+import school_oop.repository.SchoolClassRepository;
+import school_oop.repository.TeacherRepository;
 
 public class Discipline {
     private String name;
     private int workload;
 
-    private ArrayList<Teacher> teachers;
-    private ArrayList<SchoolClass> schoolClasses;
+    private final TeacherRepository teachers;
+    private final SchoolClassRepository schoolClasses;
 
     public Discipline(String name, int workload) {
         this.name = name;
         this.workload = workload;
+        teachers = new TeacherRepository();
+        schoolClasses = new SchoolClassRepository();
     }
 
     public String getName() {
@@ -30,19 +33,11 @@ public class Discipline {
         this.workload = workload;
     }
 
-    public ArrayList<Teacher> getTeachers() {
+    public TeacherRepository getTeachers() {
         return teachers;
     }
 
-    public void setTeachers(ArrayList<Teacher> teachers) {
-        this.teachers = teachers;
-    }
-
-    public ArrayList<SchoolClass> getSchoolClasses() {
+    public SchoolClassRepository getSchoolClasses() {
         return schoolClasses;
-    }
-
-    public void setSchoolClasses(ArrayList<SchoolClass> SchoolClasses) {
-        this.schoolClasses = SchoolClasses;
     }
 }

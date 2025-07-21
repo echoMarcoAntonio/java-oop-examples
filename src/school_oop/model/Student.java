@@ -1,4 +1,4 @@
-package school_oop;
+package school_oop.model;
 
 import java.time.LocalDate;
 

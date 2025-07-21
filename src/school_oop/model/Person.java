@@ -1,4 +1,4 @@
-package school_oop;
+package school_oop.model;
 
 public class Person {
     private String name;
@@ -14,7 +14,7 @@ public class Person {
     }
 
     public void setName(String name) {
-        if (this.name != null) {
+        if (name != null) {
             this.name = name;
         } else {
             System.out.println("O nome não pode ser nulo.");
@@ -26,10 +26,10 @@ public class Person {
     }
 
     public void setRegistrationNumber(int registrationNumber) {
-        if (registrationNumber + "".length() >= 4) {
+        if (String.valueOf(registrationNumber).length() >= 8) {
             this.registrationNumber = registrationNumber;
         } else {
-            System.out.println("Número de matrícula não atende os requisítos. Deve possuir 4 ou mais caracteres.");
+            System.out.println("Número de matrícula inválido. Deve ter 8 dígitos.");
         }
     }
 }
